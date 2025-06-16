@@ -1,8 +1,7 @@
 module I18n
   module Alchemy
     # Depend on AS::Basic/ProxyObject which has a "blank slate" - no methods.
-    base_proxy = defined?(ActiveSupport::ProxyObject) ?
-      ActiveSupport::ProxyObject : ActiveSupport::BasicObject
+    base_proxy = defined?(ActiveSupport::ProxyObject) ? ActiveSupport::ProxyObject : ::BasicObject
 
     class Proxy < base_proxy
       include AttributesParsing
